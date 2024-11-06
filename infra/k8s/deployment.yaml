@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: presume-coll-d96f6e906428497c9354d9cdf7b847ca-depl
+  labels:
+    app: presume-coll-d96f6e906428497c9354d9cdf7b847ca
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: presume-coll-d96f6e906428497c9354d9cdf7b847ca
+  template:
+    metadata:
+      labels:
+        app: presume-coll-d96f6e906428497c9354d9cdf7b847ca
+    spec:
+      containers:
+        - name: presume-coll-d96f6e906428497c9354d9cdf7b847ca
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:presume-coll-d96f6e906428497c9354d9cdf7b847ca
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9024

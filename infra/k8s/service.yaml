@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: presume-coll-d96f6e906428497c9354d9cdf7b847ca-srv
+spec:
+  selector:
+    app: presume-coll-d96f6e906428497c9354d9cdf7b847ca
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9024
+  type: ClusterIP
